@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script>    
+        var total = 0;
+        var notas100=0;
+        var notas50=0;
+        var notas20=0;
+        var notas10=0;
+        var notas5=0;
+        var notas2=0;
+        var moeda1=0;
+        
+        function FCalcular(){
+            var matricula = document.getElementById("matri").value;
+            var quantidade = document.getElementById("quantidadet").value;
+            var hora = document.getElementById("salarioh").value;
+            
+            if(matricula == 0){
+                window.alert("Não há mais funcionarios");
+                document.getElementById("rest1").innerHTML="Valor total a ser pago: " +total;
+            
+                if(total>=100){ 
+				Math.trunc(notas100 / 100);
+				
+				}
+                
+                
+                
+                
+                
+                document.getElementById("rest2").innerHTML="Serão necessario: " +notas100;
+            }
+            else{
+                total = total + (quantidade * hora);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        João Henrique Silva <br>
+        Matricula do funcionario (Digite 0 para saber o resultado da busca):  <input type="number" id="matri"><br><br>
+        Quantidade de horas trabalhadas: <input type="number" id="quantidadet"><br>
+        Salário hora: <input type="number" id="salarioh"><br>
+        <input type="button" value ="Calcular" onclick="FCalcular()"/><br><br>
+
+        
+        <h3 id="rest1"></h3>
+        <h3 id="rest2"></h3>
+    </form>
+    
+</body>
