@@ -1,0 +1,50 @@
+<html>
+	
+	<head>
+		<title>exe 4</title>
+		<script type="text/javascript">
+
+		function calcula(){
+			var hora = parseFloat(document.getElementById("hora").value);
+			var minuto = parseFloat(document.getElementById("minuto").value);
+			var segundo = parseFloat(document.getElementById("segundo").value);
+
+
+			var passou = hora * 3600 + minuto * 60 + segundo;
+			var falta = 86400 - passou;
+		
+			
+			document.getElementById("resp1").innerHTML=" Já se passou " + passou +" segundos do dia <br>";
+			document.getElementById("resp2").innerHTML=" falta ainda " + falta +" segundos do dia para acabar <br>";
+
+
+		}
+
+
+
+		</script>
+
+	</head>
+
+
+	<body>
+		<p> João Henrique</p>
+
+		digite hora
+		<input type="text" id="hora"> <br><br>
+		
+		digite minuto
+		<input type="text" id="minuto"> <br><br>
+
+		digite segundo
+		<input type="text" id="segundo"> <br><br>
+	
+		<input type="submit" value="enviar" onclick="calcula()" />
+
+		<h2 id="resp1"></h2>
+		<h2 id="resp2"></h2>
+
+	</body>
+
+
+</html>

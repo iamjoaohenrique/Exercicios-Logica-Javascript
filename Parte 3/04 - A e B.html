@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<script type='text/javascript'>
+		function verificarIdade() {
+			var a = parseInt(document.getElementById("a").value);
+			var b = parseInt(document.getElementById("b").value);
+			 
+				if ( a >  b) {
+					document.getElementById("resultado").innerHTML=" <br>a ordem crescente dos números inseridos por voce é " + a +" , "+ b ;
+				}
+				else {
+                    document.getElementById("resultado").innerHTML="<br>a ordem crescente dos números inseridos por voce é " + b + " , " + a;
+                }
+	
+			
+			
+		}
+	</script>
+<style>
+.myButton {
+	box-shadow:inset -1px 37px 14px -12px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+	background-color:#dbe6c4;
+	border-radius:42px;
+	border:2px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-family:Arial;
+	font-size:22px;
+	font-weight:bold;
+	padding:11px 76px;
+	text-decoration:none;
+	text-shadow:0px 5px 0px #ced9bf;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+	background-color:#9ba892;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style>	
+</head>
+
+<body> <br> <center>
+	
+	
+	<h4>João Henrique Silva</h4> 
+	<h1>ORDENAR OS NUMEROS: </h1>
+	Informe o primeiro número:   <input type="text" id="a" /><br><br>
+	Informe o segundo número: <input type="text" id="b" />
+	
+	<br><br>
+	<br>
+	<input type="submit" class="myButton" id="btnexemplov" value='Verificar' onclick="verificarIdade()"/><br><br>
+<p id="resultado"></p>
+<p id="resultado2"> </p>
+
+
+<br><br>
+
+</center>
+</body>
+
+</html>

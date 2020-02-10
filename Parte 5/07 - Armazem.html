@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="utf-8">
+
+<head>
+
+    <style>
+        /* Centraliza o formulário e atribui bordas e cor*/
+        .content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 360px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, .5);
+            border-radius: 20px;
+        }
+
+        /* Atribui a cor branca ao <p>*/
+        p {
+            color: white;
+        }
+
+        /* Atribui a cor ao <h1> */
+        h1 {
+            color: white;
+        }
+
+        /* Coloca borda curva e padding */
+        .editText {
+            width: 80%;
+            border-radius: 20px;
+            border: none;
+            padding: 2px;
+        }
+
+        /* Cor dos botões de ação */
+        .button1 {
+            background: white;
+            width: 50%;
+            border: none;
+            outline: none;
+            color: #000000;
+            cursor: pointer;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        /* Cor dos botões de ação */
+        .button2 {
+            background: green;
+            width: 50%;
+            border: none;
+            margin-top: 10px;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 20px;
+            padding: 10px;
+        }
+    </style>
+
+    <title>Faturamento mensal!</title>
+
+    <script type="text/javascript">
+
+        var total = 0;
+
+        function calcular() {
+
+            var vetorPreco = [];
+            var vetorQuantidade = [];
+
+            //Pega as variáveis
+            var quantidadeProduto = document.getElementById("quantidadeProduto").value;
+            var precoProduto = document.getElementById("precoProduto").value;
+
+            vetorPreco = {precoProduto}
+            vetorQuantidade = {quantidadeProduto} 
+
+            var valorAnterior = quantidadeProduto * precoProduto;
+
+            total = valorAnterior + total;
+
+            document.getElementById("resposta").innerHTML = "Faturamento mensal é: " + parseInt(total);
+
+            var botao = document.getElementById("botao").value="Agregar mais um";
+            
+            limparCampos();
+        }
+
+        function limparCampos(){
+            //Limpa os campos
+            quantidadeProduto = document.getElementById("quantidadeProduto").value="";
+            precoProduto = document.getElementById("precoProduto").value="";
+            total = 0;
+        }
+
+        function limparFaturamentoMensal(){
+            var resposta = document.getElementById("resposta").innerHTML="Faturamento mensal é: 0";
+        }
+
+    </script>
+
+</head>
+
+<body background="img.jpg">
+
+    <h3>João Henrique Silva</h3>
+    <div class="content" align="center">
+        <h1>Faturamento mensal!</h1>
+
+        <!--Campos p/ inserção de dados-->
+        <form>
+            <p>Insira a quantidade da mercadoria:</p>
+            <input type="text" class="editText" placeholder="Quantidade" id="quantidadeProduto" />
+
+            <p>Digite o preço da mercadoria:</p>
+            <input type="text" class="editText" placeholder="Preço" id="precoProduto" />
+
+        </form>
+        <p id="resposta"> Faturamento mensal: </p>
+
+        <!--Botão de ação-->
+        <input type="submit" id= "botao" class="button1" value="Calcular" onclick="calcular()" />
+
+        <input type="submit" id= "botao2" class="button2" value="Limpar Faturamento" onclick="limparFaturamentoMensal()" />
+
+    </div>
+</body>
+
+</html>

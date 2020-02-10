@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<script type='text/javascript'>
+		function somaMoedas() {
+			var q1 = parseInt(document.getElementById("q1").value);
+			var q2 = parseInt(document.getElementById("q2").value);
+			var q3 = parseInt(document.getElementById("q3").value);
+			var q4 = parseInt(document.getElementById("q4").value);
+			var q5 = parseInt(document.getElementById("q5").value);
+			var q6 = parseInt(document.getElementById("q6").value);
+			var d = parseFloat(document.getElementById("d").value);
+
+			var r = ((q1 + 0.5 * q2 + 0.25 * q3 + 0.1 * q4 + 0.05 * q5 + 0.01 * q6) * d);
+
+			document.write("Você tem um total de " + parseInt(r) + " reais");
+		}
+		
+		
+	</script>
+	<style>
+		.myButton {
+	box-shadow:inset -1px 37px 14px -12px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+	background-color:#dbe6c4;
+	border-radius:42px;
+	border:2px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-family:Arial;
+	font-size:22px;
+	font-weight:bold;
+	padding:11px 76px;
+	text-decoration:none;
+	text-shadow:0px 5px 0px #ced9bf;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+	background-color:#9ba892;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+	</style>
+</head>
+
+<body> <br><h4>João Henrique Silva</h4> 
+	<div id="form">
+		<form id="formulario" autocomplete="on">
+		  <fieldset>
+	<h1>Porquinho</h1>
+	Informe quantas moedas de um dólar você tem : <input type="text" id="q1" /><br><br>
+	Informe quantas moedas de cinquenta cent´s você tem : <input type="text" id="q2" /><br><br>
+	Informe quantas moedas de vinte e cinco cent´s você tem : <input type="text" id="q3" /><br><br>
+	Informe quantas moedas de dez cent´s você tem : <input type="text" id="q4" /><br><br>
+	Informe quantas moedas de cinco cent´s você tem : <input type="text" id="q5" /><br><br>
+	Informe quantas moedas de um cent você tem : <input type="text" id="q6" /><br><br>
+	<br>
+	Informe a cotação atual do Dólar : <input type="text" id="d" /><br><br><br>
+	<input type="submit" class="myButton" id="btnexemplov" value='Enviar' onclick="somaMoedas()" />
+</fieldset>
+</form>
+</div>
+</body>
+
+</html>

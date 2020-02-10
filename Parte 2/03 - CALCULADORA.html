@@ -1,0 +1,70 @@
+<html>
+
+<head>
+	<script type='text/javascript'>
+		function somaValores() {
+			var n1 = parseInt(document.getElementById("n1").value);
+			var n2 = parseInt(document.getElementById("n2").value);
+		
+			var soma = n1 + n2;
+			var sub = n1 - n2;
+			var mult = n1 * n2;
+			var divi = n1 / n2;
+
+			document.getElementById("resultado1").innerHTML = "O resultado da soma é:" + soma;
+			document.getElementById("resultado2").innerHTML = "O resultado da subtração é:" + sub;
+			document.getElementById("resultado3").innerHTML = "O resultado da multiplicação é:" +  mult;
+			document.getElementById("resultado4").innerHTML = "O resultado da divisão é:" +  divi;
+		}
+	</script>
+	<style>
+		.myButton {
+	box-shadow:inset -1px 37px 14px -12px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+	background-color:#dbe6c4;
+	border-radius:42px;
+	border:2px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-family:Arial;
+	font-size:22px;
+	font-weight:bold;
+	padding:11px 76px;
+	text-decoration:none;
+	text-shadow:0px 5px 0px #ced9bf;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+	background-color:#9ba892;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+	</style>
+</head>
+
+<body> <br> <center>
+	
+	<h4>João Henrique Silva</h4> 
+	
+	<h1>Calculadora</h1>
+	Informe o primeiro numero : <input type="text" id="n1" /><br><br>
+	Informe o segundo numero : <input type="text" id="n2" /><br><br>
+	<br>
+	<input type="submit" class="myButton" id="btnexemplov" value='Enviar' onclick="somaValores()"/><br><br>
+
+
+
+<br><br>
+<p id="resultado1">O resultado da soma é:</p>
+<p id="resultado2">O resultado da subtração é:</p>
+<p id="resultado3">O resultado da multiplicação é:</p>
+<p id="resultado4">O resultado da divisão é:</p>
+
+</center>
+</body>
+
+</html>

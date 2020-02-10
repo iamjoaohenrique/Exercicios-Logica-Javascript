@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>9° Script</title>
+		<script type="text/javascript">
+			function Idade() {
+			
+				var Ano_nasc = parseFloat(document.getElementById("Ano_nasc").value);
+				var Ano_atual = parseFloat(document.getElementById("Ano_atual").value);
+				var Maior = Ano_atual - Ano_nasc;
+					if (Maior < 18) {
+				document.write('Você é menor de idade e não pode entrar');
+				}
+					else {
+				document.write('Você é maior de idade e você pode entrar');
+				}
+		
+		
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+		João Henrique Silva<br><br>
+			<h3>P03E9 - Idade</h3><br><br>
+	Digite o ano de nascimento: <input type="text" Id="Ano_nasc"/><br><br>
+	Digite o ano atual: <input type="text" Id="Ano_atual"/><br><br>
+	
+	
+	<input type="submit" value="Enviar" onclick="Idade()"/>
+	
+	</body>
+</html>

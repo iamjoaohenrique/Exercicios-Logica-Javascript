@@ -1,0 +1,41 @@
+<html>
+	
+	<head>
+		<title>exe 6</title>
+		<script type="text/javascript">
+
+		function calcula(){
+			var raio = parseFloat(document.getElementById("raio").value);
+
+			var perimetro = 2 * 3.14159 * raio;
+			var area = 3.14159 * raio * raio ;
+			
+		
+			
+			document.getElementById("resp1").innerHTML=" A perimetro do circulo é " + perimetro + "<br>";
+			document.getElementById("resp2").innerHTML=" A area do circulo é  " + area + "<br>"; 
+
+		}
+
+
+
+		</script>
+
+	</head>
+
+
+	<body  align="center">
+		<p> João Henrique</p>
+
+		digite o raio do circulo
+		<input type="text" id="raio"> <br><br>
+	
+		<input type="submit" value="enviar" onclick="calcula()" />
+
+		<h2 id="resp1"></h2>
+		<h2 id="resp2"></h2>
+
+	</body>
+
+
+</html>

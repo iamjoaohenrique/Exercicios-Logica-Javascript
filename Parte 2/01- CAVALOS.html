@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<script type='text/javascript'>
+		function validarCavalos() {
+			var massa = document.getElementById("massa").value;
+			var altura = document.getElementById("altura").value;
+			var tempo = document.getElementById("tempo").value;
+
+			var cavalos = ((massa * (altura / tempo) / 745.6999));
+
+			document.write("Você vai precisar de " + parseInt(cavalos) + " cavalos");
+		}
+	</script>
+</head>
+
+<body>
+	<h4>João Henrique Silva</h4> 
+	Informe a massa em Kilos:<input type="text" id="massa" /><br><br>
+	Infomre a altura em metros: <input type="text" id="altura" /><br><br>
+	Informe o tempo em segundos: <input type="text" id="tempo" /><br><br><br>
+	<input type="submit" id="btnexemplov" value='Enviar' onclick="validarCavalos()" />
+
+</body>
+
+</html>

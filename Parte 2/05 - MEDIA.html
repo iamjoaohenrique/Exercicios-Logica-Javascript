@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+<head>
+    <title>Calculo de Média</title>
+    <link rel="icon" type="image/x-icon" href="teste.ico">
+    <script type="text/javascript">
+        function calcular() {
+            
+            var v1 =parseFloat (document.getElementById("valor1").value);
+            var v2 =parseFloat (document.getElementById("valor2").value);
+            var v3 =parseFloat (document.getElementById("valor3").value);
+            var v4 =parseFloat (document.getElementById("valor4").value);
+
+            var aritmetica= (v1+v2+v3+v4)/4;
+            var geometrica= Math.pow((v1+v2+v3+v4),0.25);
+            var ponderada= (v1*1+v2*2+v3*3+v4*4)/10;               
+        
+
+         
+            document.getElementById("resposta").innerHTML="Sua média Aritmética é " + (aritmetica ) 
+            document.getElementById("resposta2").innerHTML="Sua média Geométrica é  " + (geometrica )
+            document.getElementById("resposta3").innerHTML="Sua média Ponderada é  " + (ponderada ) 
+            
+               
+         }
+
+     
+
+
+    </script>
+        <style> 
+        .content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .myButton {
+    box-shadow:inset 0px 1px 0px 0px #cf866c;
+    background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    background-color:#d0451b;
+    border-radius:3px;
+    border:1px solid #942911;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #854629;
+}
+.myButton:hover {
+    background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+    background-color:#bc3315;
+}
+.myButton:active {
+    position:relative;
+    top:1px;}
+        </style>
+    
+    
+</head>
+<body  align="center">
+    
+    <h4>João Henrique Silva</h4> 
+    <div class="content" align="center">
+        
+        <h1>Notas Bimestrais</h1>
+        <br><br><br>
+        Valor 1: <input type="number" placeholder="Digite 1 Numero" id="valor1"/><br><br> 
+        Valor 2: <input type="number" placeholder="Digite 1 Numero" id="valor2"/><br><br>
+        Valor 3: <input type="number" placeholder="Digite 1 Numero" id="valor3"/><br><br>
+        Valor 4: <input type="number" placeholder="Digite 1 Numero" id="valor4"/><br><br>
+        
+
+        <button onclick="calcular()" class="myButton">Calcular</button>
+        <h4><p id="resposta" >Média Aritmética</p></h4>
+        <h4><p id="resposta2" >Média Geométrica</p></h4>
+        <h4><p id="resposta3" >Média Ponderada</p></h4>
+     
+
+    </div>
+        
+        
+        
+    
+  
+</body>
+</html>

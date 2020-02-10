@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+<head>
+	<title>Verificando numero de usuario!</title>
+	<link rel="icon" type="image/x-icon" href="teste.ico">
+	<script type="text/javascript">
+
+
+		
+        
+
+		function somarValores(){
+
+			var vetor = [];
+			var valor = parseInt(document.getElementById("ano").value);
+			
+		
+
+ 
+		for (var i=0; i<2; i++){
+        vetor[i] = Math.random ()*10 ; 
+        var procurar = parseInt(vetor[i]); 
+      	 
+
+ 		if ( procurar == valor){
+
+ 			document.getElementById("resultado").innerHTML = "Usuario registrado";
+
+ 		}
+ 		else {
+ 			document.getElementById("resultado").innerHTML ="Não localizado";
+
+ 		} 	
+ 		    
+  		
+		}
+	}
+
+
+
+
+ 
+	</script>
+		<style> 
+        .content {
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+
+
+.myButton {
+	box-shadow:inset 0px 0px 14px -3px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+	background-color:#dbe6c4;
+	border-radius:6px;
+	border:1px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+	background-color:#9ba892;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+body {background-image: url();}
+form {
+   background-color: #cccc;  
+}
+
+    	</style>
+
+	
+
+</head>
+<body>
+
+	
+	<h4>João Henrique Silva</h4> 
+	<div class="content" align="center" id="form">
+		
+		<h1>Verificando numero de usuario!</h1>
+		<br><br>
+
+     Numero de Identificação <input type="number" placeholder="Numero de cadastro" id="ano"/><br><br>
+
+      <input type="button" onClick="somarValores()" class="myButton" value="botao">
+
+
+
+       
+       <h2><p id="resultado" >Resultado aqui !</p></h2>
+       
+
+    </div>
+
+    	
+  		
+  		
+    
+  
+</body>
+</html>

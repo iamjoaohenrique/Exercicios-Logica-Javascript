@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>10�Script</title>            
+            <script type="text/javascript">
+            function idade  (){   
+                var n1 =  parseFloat(document.getElementById("num1").value);
+                var n2 =  parseFloat(document.getElementById("num2").value);
+                
+                var soma = n1 + n2; 
+                
+                if(soma > 100){
+                    document.getElementById("res1").innerHTML=soma + " Poxa! Que n�mero grande.";
+                }
+                else{
+                    document.getElementById("res1").innerHTML=soma;
+                }
+                
+            }
+            </script> 
+    </head>
+    <body>
+        João Henrique Silva<br>
+        Informe o primeiro numero: <input type="number" id="num1"/><br>
+        Informa o segundo numero: <input type="number" id="num2"/><br>
+        
+        <input type="submit" value="enviar" onclick="idade()"/> 
+        <table border="4" cellpadding="20" cellspacing="10">
+            <th>
+            <h3 id="res1"></h3>
+            <h3 id="res2"></h3>
+            <h3 id="res3"></h3>
+            </th>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title></title>            
+            <script type="text/javascript">
+            function idade(){   
+                var A =  parseFloat(document.getElementById("num1").value);
+                var B =  parseFloat(document.getElementById("num2").value);
+                var C =  parseFloat(document.getElementById("num3").value);
+                
+                
+                if(A > B && A > C && B > C)document.getElementById("res1").innerHTML=C+"; "+B+"; "+A;
+                if(A > B && A > C && B < C)document.getElementById("res1").innerHTML=B+"; "+C+"; "+A;
+                
+                if(A < B && A > C && B > C)document.getElementById("res1").innerHTML=C+"; "+A+"; "+B;
+                if(A < B && A < C && B > C)document.getElementById("res1").innerHTML=A+"; "+C+"; "+B;
+                
+                if(A > B && A < C && B < C)document.getElementById("res1").innerHTML=B+"; "+A+"; "+C;
+                if(A < B && A < C && B < C)document.getElementById("res1").innerHTML=A+"; "+B+"; "+C;
+                
+            }
+            </script> 
+    </head>
+    <body>
+        João Henrique Silva<br>
+        Informe o primeiro numero: <input type="number" id="num1"/><br>
+        Informa o segundo numero: <input type="number" id="num2"/><br>
+        Informa o terceiro numero: <input type="number" id="num3"/><br>
+
+        <input type="submit" value="enviar" onclick="idade()"/> 
+        <table>
+            <th>
+            <h3 id="res1"></h3>
+            <h3 id="res2"></h3>
+            <h3 id="res3"></h3>
+            </th>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script>    
+            var matriculas=[];
+            var nomes=[];
+            var i= 0;
+            var achou = 0;
+            var naoachou = 0;
+
+        function inserir(){
+            var matricula = document.getElementById("matri").value;
+            var nome = document.getElementById("nome").value;
+            
+            matriculas[i] = matricula;
+            nomes[i] = nome;
+            i = i + 1;
+            window.alert(i);
+        };
+        function busca(){
+            var pesquisa = document.getElementById("pesquisa").value;
+            if(pesquisa == 0){
+                document.getElementById("rest1").innerHTML="Buscas com sucesso: " +achou; 
+                document.getElementById("rest2").innerHTML="Buscas sem sucesso: " +naoachou; 
+            }
+            else{
+                var encontrei = 0;
+                var a = 0;
+                while(a<=i && encontrei == 0){
+                    
+                    if(pesquisa == matriculas[a]){
+                        achou = achou + 1;
+                        window.alert("achou");
+                        encontrei =1;
+                    }
+                    a = a +1;
+                }
+                if(encontrei == 0){
+                        naoachou = naoachou +1;
+                        window.alert("Funcionário não existe");
+                    }  
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Matricula do funcionario: <input type="number" id="matri"><br><br>
+        Nome do funcionario : <input type="text" id="nome"><br>
+        <input type="button" value ="Cadastrar" onclick="inserir()"/><br><br>
+
+        Pesquisar com o numero da matricula (Digite 0 para saber o resultado da busca): <input type="number" id="pesquisa"><br>
+        <input type="button" value ="Pesquisar" onclick="busca()"><br>
+        
+        <h3 id="rest1"></h3>
+        <h3 id="rest2"></h3>
+    </form>
+    
+</body>
+
+</html>

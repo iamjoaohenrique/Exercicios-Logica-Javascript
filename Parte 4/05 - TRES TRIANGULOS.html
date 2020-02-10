@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function media(){
+            for( var  i = 0; i < 20; i ++){
+              var l1 = parseFloat(document.getElementById("11").value);
+              var l2 = parseFloat(document.getElementById("12").value);
+              var l3 = parseFloat(document.getElementById("13").value);
+                    if (l1 + l2 > l3 && l1 + l3 > l2 &&  l2 + l2 > l1){
+                        if (l1 == l2 && l2 == l3){
+                            document.getElementById("resultado").innerHTML = "Esse triângulo é equilatero pois tem os lados " + l1 + l2 + l3 + " iguais";
+                        }
+                        else{
+                            
+                            if(l1 != l2 || l2 != l3){
+                            document.getElementById("resultado").innerHTML = "Esse triângulo é escaleno os lados são diferentes";
+                        }
+                        else{
+                           
+                            document.getElementById("resultado").innerHTML = "Esse triângulo é isoceles";
+                        
+                        }
+                    }
+                   
+               
+          }
+          else{
+                            document.getElementById("resultado").innerHTML = "não é possível fazer um triangulo com essas medidas "+ l1 + " " + " "+ l2 + " " + l3 ;
+                        
+          }
+
+
+         }}
+    </script>
+    <style>
+        .myButton {
+            box-shadow: inset -1px 37px 14px -12px #f2fadc;
+            background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+            background-color: #dbe6c4;
+            border-radius: 42px;
+            border: 2px solid #b2b8ad;
+            display: inline-block;
+            cursor: pointer;
+            color: #757d6f;
+            font-family: Arial;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 11px 76px;
+            text-decoration: none;
+            text-shadow: 0px 5px 0px #ced9bf;
+        }
+
+        .myButton:hover {
+            background: linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+            background-color: #9ba892;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+    </style>
+</head>
+
+<body align="center">
+    <h3>João Henrique Silva</h3><br><br><br><br>
+    <h1>verificar se é um triângulo equilátero (possui os 3 lados iguais), isósceles (possui 2 lados iguais e 1 diferente) ou escaleno (possui os 3 lados diferentes).</h1>
+    <br><br>
+	Digite o primeiro número: <input type="text" Id="11"/><br><br>
+	Digite o segundo número: <input type="text" Id="12"/><br><br>
+	Digite o terceiro: <input type="text" Id="13"/><br><br>
+    <br><br><input type="submit" class="myButton" id="btnexemplov" value='Verificar'
+        onclick="media()" /><br><br>
+    <p id="resultado"></p>
+    <p id="resultado2"></p>
+</body>
+
+</html>

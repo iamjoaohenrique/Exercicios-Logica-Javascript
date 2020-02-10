@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matriz</title>
+    <style>
+      #grid {
+        text-align: center;
+      }
+      #grid td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="grid"></table>
+    <h3 id="total"></h3>
+
+    <script type="text/javascript">
+      var maxValue = 100;
+      var gridSize = 5;
+      var total = 0;
+      var grid = document.getElementById("grid");
+
+      for (var i = 0; i < gridSize; i++) {
+        var row = document.createElement("tr");
+
+        for (var j = 0; j < gridSize; j++) {
+          var cell = document.createElement("td");
+
+          var value = Math.floor(Math.random() * maxValue);
+
+          cell.append(value);
+          row.append(cell);
+
+          if (i === j) {
+            total += value;
+          }
+        }
+        grid.append(row);
+      }
+
+      document.getElementById("total").append(total);
+    </script><br>
+	<h3>João Henrique Silva</h3>
+  </body>
+</html>
